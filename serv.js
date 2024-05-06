@@ -21,8 +21,8 @@ app.use((err, req, res, next) => {
   res.status(500).send("Internal Server Error");
 });
 
-// Serve static files from the 'Public' directory
-app.use(express.static(path.join(__dirname, "Public")));
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
