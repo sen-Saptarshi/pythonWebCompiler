@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/runPython", (req, res) => {
-  const userInput = sanitizeInput(req.body.user); // Sanitize user code
+  const userInput = req.body.user; // Sanitize user code
 
   // Create a temporary file for the Python code
   const filename = `${Date.now()}.py`;

@@ -1,9 +1,10 @@
-const editor = document.getElementById("editor");
+// const editor = document.getElementById("editor");
 const runButton = document.getElementById("run-btn");
 const output = document.getElementById("output");
 
 runButton.addEventListener("click", async () => {
-  const code = editor.value;const editor = document.getElementById("editor");
+  const editor = document.getElementById("editor");
+  const code = editor.value;
   const runButton = document.getElementById("run-btn");
   const output = document.getElementById("output");
 
@@ -24,7 +25,6 @@ runButton.addEventListener("click", async () => {
       output.textContent = "Error running Python code";
     }
   });
-
 
   try {
     const response = await fetch("/runPython", {
